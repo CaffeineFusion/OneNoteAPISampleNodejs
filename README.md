@@ -41,7 +41,17 @@ After you've setup your web server described above,....
 3. On the API Settings page, set Mobile or desktop setting to No.
 4. Set the Redirect URI to the domain name of your web site, as in the following example. The root domain name must be unique, so if you use one domain for testing and another for production, you'll need to register separate client ids and secrets for each domain.
 ![](images/OneNoteMSAScreen.png)
-5. On the App Setting page, copy the client ID and secret into the config.js file. 
+5. On the App Setting page, copy the client ID and secret into a new config.js file as follows:
+
+```module.exports = {
+    //Live Connect API information
+    clientId: '000000004011C945',
+    clientSecret: 'U5ofKaQiol75VbohV4hh-2x8XZpcJoPf ',
+    redirectUrl: 'http://onenoteapisamples.com:3000/callback'
+};```
+
+_Note: config.js has been added to the ignore file to protect creds_
+
 6. Open a command prompt and go to the root directory of the project. 
 7. Setup project dependencies with the `npm install` command.
 8. Run the app with the `npm start` command.
